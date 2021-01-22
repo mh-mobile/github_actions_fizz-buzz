@@ -8,6 +8,9 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node: [10, 12]
+        exclude:
+          - os: ubuntu-latest
+            node: 10
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
